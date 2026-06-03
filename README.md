@@ -82,7 +82,7 @@ Smart-Expense-Tracker/
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/Smart-Expense-Tracker.git
+git clone https://github.com/erchandrain-ui/Smart-Expense-Tracker.git
 cd Smart-Expense-Tracker
 ```
 
