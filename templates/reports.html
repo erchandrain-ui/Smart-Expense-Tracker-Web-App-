@@ -1,0 +1,39 @@
+{% extends 'index.html' %}
+{% block content %}
+<div class="row">
+    <div class="col-md-6 mb-4">
+        <div class="card shadow-sm h-100">
+            <div class="card-header bg-secondary text-white"><h5>Bulk Import Data</h5></div>
+            <div class="card-body d-flex flex-column justify-content-between">
+                <p>Upload a processed CSV structural sheet directly to your ledger environment records.</p>
+                <form action="{{ url_for('reports') }}" method="POST" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <input type="file" name="file" class="form-control" accept=".csv" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Process Dataset</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 mb-4">
+        <div class="card shadow-sm h-100">
+            <div class="card-header bg-dark text-white"><h5>AI Forecast Engine</h5></div>
+            <div class="card-body d-flex flex-column justify-content-between">
+                <p>Leverage the localized model parameters file to project dynamic spending volumes for the next 30 days.</p>
+                <form action="{{ url_for('reports') }}" method="POST">
+                    <input type="hidden" name="predict" value="true">
+                    <button type="submit" class="btn btn-dark w-100 mb-3">Run ML Forecast Model</button>
+                </form>
+                
+                {% if prediction %}
+                <div class="alert alert-info text-center mt-2">
+                    <strong>Projected Outlay (Next Month):</strong> <br>
+                    <span class="fs-4 text-primary">{{ prediction }}</span>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

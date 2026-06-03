@@ -1,0 +1,22 @@
+{% extends 'index.html' %}
+{% block content %}
+<div class="text-center my-3">
+    <h2>Data Visualizations & Analytics</h2>
+    <p class="text-muted">Visual breakdown generated directly from current ledger files.</p>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-6 mb-4 text-center">
+        <div class="card p-3 shadow-sm">
+            <h5>Spending Shares</h5>
+            <img src="{{ url_for('static', filename='images/category_pie.png') }}" class="img-fluid rounded shadow-sm" alt="Category Distribution Chart">
+        </div>
+    </div>
+    <div class="col-md-6 mb-4 text-center">
+        <div class="card p-3 shadow-sm">
+            <h5>Timeline Dynamics</h5>
+            <img src="{{ url_for('static', filename='images/spending_trend.png') }}" class="img-fluid rounded shadow-sm" alt="Timeline Trends Chart">
+        </div>
+    </div>
+</div>
+{% endblock %}

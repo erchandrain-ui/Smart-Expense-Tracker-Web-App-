@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+instance/
+.env
+.venv
+env/
+venv/
+models/expense_predictor.pkl
+uploads/*
+!uploads/sample_expenses.csv
+static/images/*.png
