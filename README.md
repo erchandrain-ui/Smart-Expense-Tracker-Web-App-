@@ -1,7 +1,6 @@
 # 💰 Smart Expense Tracker Web App
 
-A modern Flask-based expense tracking application that helps users manage daily expenses, analyze spending habits, generate reports, and predict future expenses using data analytics.
-
+A full‑stack personal finance management application built with the MERN stack (MongoDB, Express, React, Node.js). Track income, expenses, set monthly budgets, and visualize spending with interactive charts.
 ## 🚀 Features
 
 * Add and manage expenses
